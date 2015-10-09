@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.UF1_RA1.Aleatorio
+            Me.MainForm = Global.UF1_RA1.ExpresionesBooleanas
         End Sub
     End Class
 End Namespace
