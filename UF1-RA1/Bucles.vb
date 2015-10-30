@@ -35,4 +35,39 @@
 
         MessageBox.Show(salida)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim cnt As Integer = 0
+        Dim salida As String = ""
+
+        While cnt <= 20
+            salida = salida + " - " + cnt.ToString()
+            cnt = cnt + 2
+        End While
+
+        MessageBox.Show(salida)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim suma As Integer = 0
+        Dim cnt As Integer = 0
+
+        While cnt <= 100
+            suma = suma + cnt
+            cnt = cnt + 1
+        End While
+
+        MessageBox.Show(suma.ToString())
+
+    End Sub
+
+    Private Sub AcumuladoFor()
+        Dim suma As Integer = 0
+
+        For cnt As Integer = 0 To 100
+            suma = suma + cnt
+        Next
+
+        MessageBox.Show(suma.ToString())
+    End Sub
 End Class
