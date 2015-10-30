@@ -25,4 +25,14 @@
         End If
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim salida As String = ""
+
+        For cnt As Integer = 0 To 20 Step +2
+            salida = salida + " - " + cnt.ToString()
+        Next
+
+        MessageBox.Show(salida)
+    End Sub
 End Class
