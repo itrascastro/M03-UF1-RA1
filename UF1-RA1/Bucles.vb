@@ -70,4 +70,37 @@
 
         MessageBox.Show(suma.ToString())
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim nota As Double
+        Dim sumaTotal As Double = 0
+        Dim cnt As Integer
+        Dim media As Double
+
+        For cnt = 0 To 9
+            nota = InputBox("Introduce nota")
+            sumaTotal = sumaTotal + nota
+        Next
+
+        media = sumaTotal / 10
+
+        MessageBox.Show(media.ToString())
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim menor As Integer
+        Dim cnt As Integer
+        Dim numero As Integer
+
+        menor = InputBox("Introduce un número")
+
+        For cnt = 0 To 10
+            numero = InputBox("Introduce un número")
+            If (numero < menor) Then
+                menor = numero
+            End If
+        Next
+
+        MessageBox.Show(menor.ToString())
+    End Sub
 End Class
