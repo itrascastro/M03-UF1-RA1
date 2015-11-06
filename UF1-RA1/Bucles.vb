@@ -107,7 +107,7 @@
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim altura As Integer = 5
         Dim fila As Integer
-        Dim columnas As Integer = 1
+        Dim columna As Integer
         Dim salida As String = ""
 
         For fila = 0 To altura - 1
