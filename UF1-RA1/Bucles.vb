@@ -103,4 +103,20 @@
 
         MessageBox.Show(menor.ToString())
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim altura As Integer = 5
+        Dim fila As Integer
+        Dim columnas As Integer = 1
+        Dim salida As String = ""
+
+        For fila = 0 To altura - 1
+            For columna = 0 To fila
+                salida = salida + "*"
+            Next
+            salida = salida + vbNewLine
+        Next
+
+        MessageBox.Show(salida)
+    End Sub
 End Class
