@@ -78,6 +78,12 @@
     <Compile Include="Aleatorio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Arrays.Designer.vb">
+      <DependentUpon>Arrays.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Arrays.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bubles.Designer.vb">
       <DependentUpon>Bubles.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Aleatorio.resx">
       <DependentUpon>Aleatorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arrays.resx">
+      <DependentUpon>Arrays.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bucles.resx">
       <DependentUpon>Bucles.vb</DependentUpon>
