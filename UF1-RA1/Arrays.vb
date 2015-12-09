@@ -29,4 +29,42 @@
         media = total / notas.Length()
         MessageBox.Show(menor.ToString() + ", " + mayor.ToString() + ", " + media.ToString())
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim numeros() As Integer = {4, 20, 10, 12, 0, 7}
+        Dim cnt As Integer
+        Dim menor As Integer = numeros(0)
+        Dim posMenor As Integer = 0
+
+        For cnt = 1 To 5
+            If numeros(cnt) < menor Then
+                menor = numeros(cnt)
+                posMenor = cnt
+            End If
+        Next
+
+        MessageBox.Show(posMenor.ToString())
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim tabla(2, 2) As Integer
+        tabla = {
+            {2, 3, 4},
+            {1, 5, 0},
+            {2, 4, 1}
+        }
+
+        Dim i, j As Integer
+        Dim suma As Integer = 0
+        Dim media As Double
+
+        For i = 0 To 2
+            For j = 0 To 2
+                suma = suma + tabla(i, j)
+            Next
+        Next
+
+        media = suma / (3 * 3)
+
+    End Sub
 End Class
