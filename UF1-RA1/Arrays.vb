@@ -89,4 +89,31 @@
 
         MessageBox.Show(salida)
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim tabla(2, 2) As Integer
+        tabla = {
+            {2, 3, 4},
+            {1, 5, 0},
+            {2, 4, 1}
+        }
+
+        Dim i, j As Integer
+        Dim r As New Random()
+
+        For i = 0 To 2
+            For j = 0 To 2
+                tabla(i, j) = r.Next(0, 100)
+            Next
+        Next
+
+        For i = 0 To 2
+            For j = 0 To 2
+                If i = j Then 'diagonal
+                    tabla(i, j) = 0
+                End If
+            Next
+        Next
+
+    End Sub
 End Class
