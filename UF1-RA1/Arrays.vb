@@ -62,9 +62,31 @@
             For j = 0 To 2
                 suma = suma + tabla(i, j)
             Next
+            'fin de fila
         Next
 
         media = suma / (3 * 3)
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim tabla(2, 2) As Integer
+        tabla = {
+            {2, 3, 4},
+            {1, 5, 0},
+            {2, 4, 1}
+        }
+
+        Dim i, j As Integer
+        Dim salida As String = ""
+
+        For i = 0 To 2
+            For j = 0 To 2
+                salida = salida + tabla(i, j).ToString + " "
+            Next
+            salida = salida + vbNewLine
+        Next
+
+        MessageBox.Show(salida)
     End Sub
 End Class
