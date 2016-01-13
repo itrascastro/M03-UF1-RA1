@@ -116,4 +116,79 @@
         Next
 
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim myControls(10, 10)
+        Dim i, j As Integer
+
+        For i = 0 To 10
+            For j = 0 To 10
+                Dim b As Button
+                b = New Button
+                b.Name = "buton" + i.ToString + j.ToString
+
+                myControls(i, j) = b
+                Me.Controls.Add(b)
+            Next
+        Next
+        MessageBox.Show(myControls(7, 7).Name)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim tabla(4, 4) As Integer
+        Dim i, j As Integer
+
+        For i = 0 To 4
+            For j = 0 To 4
+                If (i = 2 Or j = 2) Then
+                    tabla(i, j) = 1
+                Else
+                    tabla(i, j) = 0
+                End If
+            Next
+        Next
+
+        Dim salida As String = ""
+
+        For i = 0 To 4
+            For j = 0 To 4
+                salida += tabla(i, j).ToString + "  "
+            Next
+            salida += vbNewLine
+        Next
+
+        MessageBox.Show(salida)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim tabla(4, 4) As Integer
+        Dim i, j As Integer
+
+        For i = 0 To 4
+            For j = 0 To 4
+                If (i = 2 Or j = 2) Then
+                    tabla(i, j) = 1
+                Else
+                    tabla(i, j) = 0
+                End If
+            Next
+        Next
+
+        Me.Imprimir(tabla, 4, 4)
+
+    End Sub
+
+    Private Sub Imprimir(ByVal tabla(,) As Integer, ByVal filas As Integer, ByVal cols As Integer)
+        Dim salida As String = ""
+        Dim i, j As Integer
+
+        For i = 0 To filas
+            For j = 0 To cols
+                salida += tabla(i, j).ToString + "  "
+            Next
+            salida += vbNewLine
+        Next
+
+        MessageBox.Show(salida)
+    End Sub
 End Class
