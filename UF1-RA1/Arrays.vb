@@ -178,7 +178,7 @@
 
     End Sub
 
-    Private Sub Imprimir(ByVal tabla(,) As Integer, ByVal filas As Integer, ByVal cols As Integer)
+    Private Function Imprimir(ByVal tabla(,) As Integer, ByVal filas As Integer, ByVal cols As Integer) As String
         Dim salida As String = ""
         Dim i, j As Integer
 
@@ -189,8 +189,8 @@
             salida += vbNewLine
         Next
 
-        MessageBox.Show(salida)
-    End Sub
+        Return salida
+    End Function
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Dim tabla(4, 4) As Integer
@@ -217,5 +217,33 @@
         MessageBox.Show("La suma de los bordes es: " + suma.ToString)
 
 
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim tabla1(4, 4) As Integer
+        Dim tabla2(4, 4) As Integer
+        Dim tabla3(4, 4) As Integer
+        Dim i, j As Integer
+        Dim r As New Random
+        Dim salida1, salida2, salida3 As String
+
+        For i = 0 To 4
+            For j = 0 To 4
+                tabla1(i, j) = r.Next(0, 9)
+                tabla2(i, j) = r.Next(0, 9)
+            Next
+        Next
+
+        For i = 0 To 4
+            For j = 0 To 4
+                tabla3(i, j) = tabla1(i, j) + tabla2(i, j)
+            Next
+        Next
+
+        salida1 = Me.Imprimir(tabla1, 4, 4)
+        salida2 = Me.Imprimir(tabla2, 4, 4)
+        salida3 = Me.Imprimir(tabla3, 4, 4)
+
+        MessageBox.Show(salida1 + vbNewLine + salida2 + vbNewLine + salida3)
     End Sub
 End Class
