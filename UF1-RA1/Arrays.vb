@@ -191,4 +191,31 @@
 
         MessageBox.Show(salida)
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim tabla(4, 4) As Integer
+        Dim i, j As Integer
+        Dim suma As Integer = 0
+        Dim r As New Random
+
+        For i = 0 To 4
+            For j = 0 To 4
+                tabla(i, j) = r.Next(0, 9)
+            Next
+        Next
+
+        For i = 0 To 4
+            For j = 0 To 4
+                If (i = 0 Or i = 4 Or j = 0 Or j = 4) Then
+                    suma = suma + tabla(i, j)
+                End If
+            Next
+        Next
+
+        Me.Imprimir(tabla, 4, 4)
+
+        MessageBox.Show("La suma de los bordes es: " + suma.ToString)
+
+
+    End Sub
 End Class
